@@ -4,3 +4,31 @@
 body {
   font-family: "Inter", sans-serif;
 }
+.hero_img {
+  position: relative;
+  z-index: 1;
+  max-width: 80%;
+  margin: 2rem auto;
+}
+.hero_img::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  content: "";
+  background-color: #fff;
+  z-index: -1;
+  opacity: 0.5;
+  transform: translate(15%, 15%);
+}
+.hero_img::after {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background-color: #fff;
+  opacity: 0.5;
+  z-index: -1;
+  transform: translate(-25%, -25%);
+}

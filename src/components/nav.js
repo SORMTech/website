@@ -9,7 +9,7 @@ function Nav() {
   return (
     <nav className='p-4 capitalize w-full flex flex-col md:flex-row md:justify-between'>
       <div className='flex justify-between items-center w-full md:w-1/3'>
-        <img className='w-1/3 sm:w-1/4 md:w-1/2' src={logo} alt='logo' />
+        <img className='w-1/4 md:w-1/2' src={logo} alt='logo' />
         <i onClick={() => setNav(!nav)}>
           {nav ? (
             <IoMdClose className='text-red-300 text-3xl md:hidden' />
