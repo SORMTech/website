@@ -1,13 +1,18 @@
 import "./App.css";
 import { useGlobalContext } from "./context";
+import Nav from "./components/nav";
+import Home from "./pages/home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   const { title } = useGlobalContext();
   return (
-    <div className='App'>
-      <h1>{title} TECH</h1>
-    </div>
+    <BrowserRouter>
+      <Nav />
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
